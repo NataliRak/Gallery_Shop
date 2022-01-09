@@ -5,6 +5,7 @@ import {
   CardActions,
   Typography,
   IconButton,
+  Button,
 } from "@material-ui/core";
 import { AddShoppingCart } from "@material-ui/icons";
 import PropTypes from "prop-types";
@@ -47,7 +48,14 @@ const Product = ({ product, onAddToCart }) => {
           {" "}
           <AddShoppingCart color="secondary" />
         </IconButton>{" "}
-        ADD TO CARD
+        <Button
+          onClick={() => onAddToCart(product.id, 1)}
+          color="secondary"
+          type="button"
+          variant="contained"
+        >
+          ADD TO CARD
+        </Button>
       </CardActions>
     </Card>
   );
